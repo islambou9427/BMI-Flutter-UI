@@ -1,3 +1,5 @@
+import 'package:Bmi_Calculator/Screen/Componant/Bottom_btn.dart';
+import 'package:Bmi_Calculator/Screen/Componant/CalculatorBrain.dart';
 import 'package:Bmi_Calculator/Screen/ResulatPage.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -209,26 +211,20 @@ class _BodyState extends State<Body> {
             ],
           ),
         ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ResulatPage()));
-          },
-          child: Container(
-            decoration: BoxDecoration(
-                color: Color(0xFFEB1555),
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10))),
-            height: 60,
-            child: Center(
-              child: Text(
-                'Calculate',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-              ),
-            ),
-          ),
-        ),
+        Bottom_btn(
+            onTap: () {
+              CalculatorBrain calc =
+                  CalculatorBrain(height: height, weight: weight);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ResulatPage(
+                            bmiResults: calc.calculatorBMI(),
+                            resultsText: calc.getResult(),
+                            intrpretaion: calc.getInterpretation(),
+                          )));
+            },
+            title: 'Calculate')
       ],
     );
   }

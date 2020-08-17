@@ -1,6 +1,12 @@
+import 'package:Bmi_Calculator/Screen/Componant/Bottom_btn.dart';
 import 'package:flutter/material.dart';
 
 class ResulatPage extends StatelessWidget {
+  ResulatPage({this.bmiResults, this.resultsText, this.intrpretaion});
+  final String bmiResults;
+  final String resultsText;
+  final String intrpretaion;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +38,7 @@ class ResulatPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    'Normal',
+                    resultsText,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 35,
@@ -40,7 +46,7 @@ class ResulatPage extends StatelessWidget {
                         color: Colors.blueAccent),
                   ),
                   Text(
-                    '18',
+                    bmiResults,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 55,
@@ -48,13 +54,18 @@ class ResulatPage extends StatelessWidget {
                         color: Colors.yellow),
                   ),
                   Text(
-                    'Your Resultat is low',
+                    intrpretaion,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 35,
                         fontWeight: FontWeight.w900,
                         color: Colors.orange),
                   ),
+                  Bottom_btn(
+                      title: 'RECALCULATE',
+                      onTap: () {
+                        Navigator.pop(context);
+                      }),
                 ],
               ),
             ),
