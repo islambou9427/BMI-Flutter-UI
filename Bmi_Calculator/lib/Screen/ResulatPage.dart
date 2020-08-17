@@ -14,8 +14,48 @@ class ResulatPage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(20),
               child: Text(
-                'Your Resultat is :',
+                'Your Resultat ',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 7,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color(0xFF111328),
+              ),
+              margin: EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    'Normal',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.blueAccent),
+                  ),
+                  Text(
+                    '18',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 55,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.yellow),
+                  ),
+                  Text(
+                    'Your Resultat is low',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.orange),
+                  ),
+                ],
               ),
             ),
           ),
