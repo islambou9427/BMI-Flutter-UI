@@ -214,7 +214,7 @@ class _BodyState extends State<Body> {
         Bottom_btn(
             onTap: () {
               CalculatorBrain calc =
-                  CalculatorBrain(height: height, weight: weight);
+                  CalculatorBrain(height: Height, weight: Weight);
               Navigator.push(
                   context,
                   MaterialPageRoute(
