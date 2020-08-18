@@ -57,19 +57,19 @@ class ResulatPage extends StatelessWidget {
                     intrpretaion,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 31,
                         fontWeight: FontWeight.w900,
                         color: Colors.orange),
                   ),
-                  Bottom_btn(
-                      title: 'RECALCULATE',
-                      onTap: () {
-                        Navigator.pop(context);
-                      }),
                 ],
               ),
             ),
           ),
+          Bottom_btn(
+              title: 'RE-CALCULATE',
+              onTap: () {
+                Navigator.pop(context);
+              }),
         ],
       ),
     );

@@ -8,9 +8,9 @@ import 'Componant/CradItem_Detail.dart';
 
 enum Gender { Male, Female }
 Gender gender;
-int Height = 180;
-int Weight = 50;
-int Age = 18;
+int Height;
+int Weight;
+int Age;
 
 class Body extends StatefulWidget {
   @override
