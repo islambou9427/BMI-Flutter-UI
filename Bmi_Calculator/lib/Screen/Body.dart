@@ -8,9 +8,12 @@ import 'Componant/CradItem_Detail.dart';
 
 enum Gender { Male, Female }
 Gender gender;
-int Height;
-int Weight;
-int Age;
+// ignore: non_constant_identifier_names
+int Height = 180;
+// ignore: non_constant_identifier_names
+int Weight = 60;
+// ignore: non_constant_identifier_names
+int Age = 20;
 
 class Body extends StatefulWidget {
   @override
@@ -20,6 +23,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     Color CardColor = Color(0xFF1d1e33);
 
     return Column(
